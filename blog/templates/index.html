@@ -29,7 +29,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="static/images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
       </div>
       <!-- end loader -->
       <div class="wrapper">
@@ -101,7 +101,7 @@
                            </div>
                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
                               <div class="images_box">
-                                 <figure><img src="images/img2.png"></figure>
+                                 <figure><img src="{% static 'images/img2.png' %}"></figure>
                               </div>
                            </div>
                         </div>
@@ -121,7 +121,7 @@
                            </div>
                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
                               <div class="images_box">
-                                 <figure><img src="images/img2.png"></figure>
+                                 <figure><img src="{% static 'images/img2.png' %}"></figure>
                               </div>
                            </div>
                         </div>
@@ -141,7 +141,7 @@
                            </div>
                            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
                               <div class="images_box">
-                                 <figure><img src="images/img2.png"></figure>
+                                 <figure><img src="{% static 'images/img2.png' %}"></figure>
                               </div>
                            </div>
                         </div>
@@ -163,7 +163,7 @@
                <div class="row d_flex">
                   <div class="col-md-5">
                      <div class="about_img">
-                        <figure><img src="images/about_img.jpg" alt="#"/></figure>
+                        <figure><img src="{% static 'images/about_img.jpg' %}" alt="#"/></figure>
                      </div>
                   </div>
                   <div class="col-md-7">
@@ -203,7 +203,7 @@
                            </div>
                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 padding_left0">
                               <div class="choose_box">
-                                 <i><img src="images/admin.png" alt="#"/></i>
+                                 <i><img src="{% static 'images/admin.png' %}" alt="#"/></i>
                                  <h3> Ad Minim</h3>
                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                               </div>
@@ -228,7 +228,7 @@
                   </div>
                   <div class="col-md-5">
                      <div class="work_img">
-                        <figure><img src="images/work_img.jpg" alt="#"/></figure>
+                        <figure><img src="{% static 'images/work_img.jpg' %}" alt="#"/></figure>
                      </div>
                   </div>
                </div>
@@ -329,15 +329,6 @@
                      </div>
                   </div>
                </div>
-               <div class="copyright">
-                  <div class="container">
-                     <div class="row">
-                        <div class="col-md-12">
-                           <p>Copyright 2019 All Right Reserved By <a href="https://html.design/"> Free  html Templates</a></p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
             </div>
          </footer>
          <!-- end footer -->
@@ -353,37 +344,37 @@
       <script src="{% static 'js/custom.js' %}"></script>
       <script type="text/javascript">
          $(document).ready(function() {
-             $("#sidebar").mCustomScrollbar({
-                 theme: "minimal"
-             });
+            $("#sidebar").mCustomScrollbar({
+               theme: "minimal"
+            });
+            
+            $('#dismiss, .overlay').on('click', function() {
+               $('#sidebar').removeClass('active');
+               $('.overlay').removeClass('active');
+            });
          
-             $('#dismiss, .overlay').on('click', function() {
-                 $('#sidebar').removeClass('active');
-                 $('.overlay').removeClass('active');
-             });
-         
-             $('#sidebarCollapse').on('click', function() {
-                 $('#sidebar').addClass('active');
-                 $('.overlay').addClass('active');
-                 $('.collapse.in').toggleClass('in');
-                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-             });
+            $('#sidebarCollapse').on('click', function() {
+               $('#sidebar').addClass('active');
+               $('.overlay').addClass('active');
+               $('.collapse.in').toggleClass('in');
+               $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
          });
       </script>
       <script>
          $(document).ready(function() {
-             $(".fancybox").fancybox({
-                 openEffect: "none",
-                 closeEffect: "none"
-             });
+            $(".fancybox").fancybox({
+               openEffect: "none",
+               closeEffect: "none"
+            });
+
+            $(".zoom").hover(function() {
          
-             $(".zoom").hover(function() {
-         
-                 $(this).addClass('transition');
-             }, function() {
-         
-                 $(this).removeClass('transition');
-             });
+               $(this).addClass('transition');
+            }, function() {
+               
+               $(this).removeClass('transition');
+            });
          });
       </script>
       <script>

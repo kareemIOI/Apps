@@ -5,7 +5,6 @@ def index(request):
     return render(request, 'index.html')
 
 
-
 def register(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']

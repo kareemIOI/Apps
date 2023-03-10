@@ -7,3 +7,15 @@ class Forms(models.Model):
     email = models.EmailField(_(""), max_length=254)
     Phone = models.PhoneNumberField(_(""))
     message = models.TextField()
+    
+    
+    
+################# FRONT END IFORMATION ########################
+
+
+class navigationbar():
+    pass
+
+
+class hero_section():
+    pass

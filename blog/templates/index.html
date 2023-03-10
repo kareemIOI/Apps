@@ -247,10 +247,11 @@
                </div>
                <div class="row">
                   <div class="col-md-6">
-                     <form id="request" class="main_form" action = "messages">
+                     <form id="request" class="main_form" action = "register" method = "POST">
+                        {% csrf_token %}
                         <div class="row">
                            <div class="col-md-12 ">
-                              <input class="contactus" placeholder="Full Name" type="type" name="first_name"> 
+                              <input class="contactus" placeholder="Full Name" type="type" name="username"> 
                            </div>
                            <div class="col-md-12">
                               <input class="contactus" placeholder="Email" type="type" name="email"> 

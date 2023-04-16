@@ -4,9 +4,10 @@ from django.db import models
 
 ################# FRONT END IFORMATION ########################
 
-class navigationbar():
+
+class navigationbar:
     pass
 
 
-class hero_section():
+class hero_section:
     pass

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import environ
 from pathlib import Path
-
+import os
 
 env = environ.Env()
 environ.Env.read_env()
@@ -81,7 +81,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         'NAME': 'quizes',
         'USER': 'manager',
-        'PASSWORD': '1234',
+        'PASSWORD': 'manager',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
